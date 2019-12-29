@@ -1,0 +1,49 @@
+
+<mat-accordion class="example-headers-align">
+  <mat-expansion-panel [expanded]="step === 0" (opened)="setStep(0)" hideToggle>
+    <mat-expansion-panel-header>
+      <mat-panel-title>
+        <mat-icon>add_alarm</mat-icon>
+        Adicionar Novo WorkLog
+      </mat-panel-title>
+      <mat-panel-description>
+
+      </mat-panel-description>
+    </mat-expansion-panel-header>
+      <app-work-log-add></app-work-log-add>
+    </mat-expansion-panel>
+
+<table mat-table [dataSource]="worklogs" class="mat-elevation-z8">
+
+  <ng-container matColumnDef="Nome">
+    <th mat-header-cell *matHeaderCellDef> Nome </th>
+    <td mat-cell *matCellDef="let element"> {{element.nome}} </td>
+  </ng-container>
+
+  <ng-container matColumnDef="Código">
+    <th mat-header-cell *matHeaderCellDef> Código </th>
+    <td mat-cell *matCellDef="let element"> {{element.codigo}} </td>
+  </ng-container>
+
+
+  <ng-container matColumnDef="Empresa">
+    <th mat-header-cell *matHeaderCellDef> Empresa </th>
+    <td mat-cell *matCellDef="let element"> {{element.empresa}} </td>
+  </ng-container>
+
+  <ng-container matColumnDef="WorkLog">
+    <th mat-header-cell *matHeaderCellDef> Work Log </th>
+    <td mat-cell *matCellDef="let element"> {{element.tempo}} </td>
+  </ng-container>
+
+  <ng-container matColumnDef="Actions">
+    <th mat-header-cell *matHeaderCellDef></th>
+    <td mat-cell *matCellDef="let element">
+      <button mat-stroked-button (click)="editWorkLog(element)" >Editar</button>
+      <button mat-stroked-button color="warn" (click)="deleteWorkLog(element)" >Deletar</button>
+    </td>
+  </ng-container>
+
+  <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+  <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+</table>

@@ -1,0 +1,9 @@
+<mat-form-field>
+  <input matInput [(ngModel)]="empresa.nome" placeholder="Nome">
+</mat-form-field>
+
+<mat-form-field>
+  <input matInput [(ngModel)]="empresa.codigo" placeholder="Código">
+</mat-form-field>
+
+<button mat-stroked-button color="primary" (click)= "addEmpresa()" >Adicionar</button>

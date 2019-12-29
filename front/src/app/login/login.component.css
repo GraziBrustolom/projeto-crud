@@ -1,0 +1,19 @@
+.mat-card{
+  width: 20%;
+  margin-left: 580px;
+  margin-top: 160px;
+  height: 250px;
+}
+
+.mat-stroked-button{
+  margin-left: 120px;
+}
+
+.mat-form-field{
+  margin-left: 60px;
+}
+
+.mat-icon{
+  margin-left: 130px;
+  font-size: 50px;
+}

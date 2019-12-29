@@ -1,0 +1,21 @@
+<mat-form-field>
+  <input matInput [(ngModel)]="user.nome" placeholder="Nome">
+</mat-form-field>
+
+<mat-form-field>
+  <mat-label>Cargo</mat-label>
+  <mat-select [(value)]="user.cargo">
+    <mat-option value="Funcionário">Funcionário</mat-option>
+    <mat-option value="Gerente">Gerente</mat-option>
+  </mat-select>
+</mat-form-field>
+
+<mat-form-field>
+  <input matInput [(ngModel)]="user.codigo" placeholder="Código">
+</mat-form-field>
+
+<mat-form-field>
+  <input matInput [(ngModel)]="user.senha" placeholder="Senha de Acesso">
+</mat-form-field>
+
+<button mat-stroked-button color="primary" (click)= "addUser()" >Adicionar</button>

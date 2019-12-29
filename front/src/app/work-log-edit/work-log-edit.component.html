@@ -1,0 +1,33 @@
+<h1 mat-dialog-title>Editar Work Log</h1>
+<div mat-dialog-content>
+
+  <form class="example-form">
+    <mat-form-field class="example-full-width">
+      <input matInput name="username" [(ngModel)]="workLog.nome" placeholder="Nome">
+    </mat-form-field>
+
+    <mat-form-field class="example-full-width">
+      <input matInput name="usercodigo"  [(ngModel)]="workLog.codigo" placeholder="Código">
+    </mat-form-field>
+
+    <mat-form-field class="example-full-width">
+    <mat-label>Empresa</mat-label>
+    <mat-select [(ngModel)]="workLog.empresa" name="empresa">
+      <mat-option *ngFor="let empresa of empresas" [value]="empresa.nome">
+        {{empresa.nome}}
+      </mat-option>
+    </mat-select>
+  </mat-form-field>
+
+    <mat-form-field class="example-full-width">
+      <input matInput name="tempo"  [(ngModel)]="workLog.tempo" placeholder="Tempo">
+    </mat-form-field>
+
+  </form>
+
+
+</div>
+<div mat-dialog-actions>
+  <button mat-button [mat-dialog-close]="workLog" cdkFocusInitial>Concluir</button>
+  <button mat-button (click)="onNoClick()" cdkFocusInitial>Cancelar</button>
+</div>

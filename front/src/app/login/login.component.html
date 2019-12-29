@@ -1,0 +1,13 @@
+<mat-card>
+  <mat-icon>account_box</mat-icon>
+  <form class="example-form">
+    <mat-form-field class="example-full-width">
+      <input matInput name="codigo" [(ngModel)]="user.codigo" placeholder="Código">
+    </mat-form-field>
+
+    <mat-form-field class="example-full-width">
+      <input matInput name="password" [(ngModel)]="user.senha" placeholder="Senha">
+    </mat-form-field>
+    </form>
+    <button mat-stroked-button (click)="login(user)">Login</button>
+</mat-card>

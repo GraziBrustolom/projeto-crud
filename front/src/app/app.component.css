@@ -1,0 +1,31 @@
+.example-container {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: #eee;
+}
+
+.mat-sidenav{
+  width: 200px;
+}
+
+.mat-icon{
+  margin-top: 50px;
+  margin-left: 80px;
+}
+
+.mat-stroked-button{
+  margin-left: 40px;
+}
+
+.mat-card{
+  height: 95%;
+}
+
+#userIcon {
+  font-size: 80px;
+  margin-left: 50px;
+
+}

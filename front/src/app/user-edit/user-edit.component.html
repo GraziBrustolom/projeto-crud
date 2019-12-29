@@ -1,0 +1,32 @@
+<h1 mat-dialog-title>Editar {{user.nome}}</h1>
+<div mat-dialog-content>
+
+  <form class="example-form">
+    <mat-form-field class="example-full-width">
+      <input matInput name="username" [(ngModel)]="user.nome" placeholder="Nome">
+    </mat-form-field>
+
+    <mat-form-field>
+      <mat-label>Cargo</mat-label>
+      <mat-select name="usercargo"  [(value)]="user.cargo">
+        <mat-option value="Funcionário">Funcionário</mat-option>
+        <mat-option value="Gerente">Gerente</mat-option>
+      </mat-select>
+    </mat-form-field>
+
+    <mat-form-field class="example-full-width">
+      <input matInput name="usercodigo"  [(ngModel)]="user.codigo" placeholder="Código">
+    </mat-form-field>
+
+    <mat-form-field class="example-full-width">
+      <input matInput name="usersenha"  [(ngModel)]="user.senha" placeholder="Senha">
+    </mat-form-field>
+
+  </form>
+
+
+</div>
+<div mat-dialog-actions>
+  <button mat-button [mat-dialog-close]="user" cdkFocusInitial>Concluir</button>
+  <button mat-button (click)="onNoClick()" cdkFocusInitial>Cancelar</button>
+</div>

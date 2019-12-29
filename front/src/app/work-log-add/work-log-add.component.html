@@ -1,0 +1,25 @@
+<mat-form-field>
+  <mat-label>Empresa</mat-label>
+  <mat-select [(ngModel)]="worklog.empresa" name="empresa">
+    <mat-option *ngFor="let empresa of empresas" [value]="empresa.nome">
+      {{empresa.nome}}
+    </mat-option>
+  </mat-select>
+
+</mat-form-field>
+
+<mat-form-field>
+  <input matInput [(ngModel)]="worklog.tempo" readonly="true" placeholder="Tempo">
+</mat-form-field>
+
+
+<mat-button-toggle-group #group="matButtonToggleGroup">
+  <mat-button-toggle value=true (change)="manageCounter(true)"  aria-label="on">
+    <mat-icon>alarm_on</mat-icon>
+  </mat-button-toggle>
+  <mat-button-toggle value=false (change)="manageCounter(false)" aria-label="off">
+    <mat-icon>alarm_off</mat-icon>
+  </mat-button-toggle>
+</mat-button-toggle-group>
+
+<button mat-stroked-button color="primary" (click)= "addWorkLog()" >Adicionar</button>
